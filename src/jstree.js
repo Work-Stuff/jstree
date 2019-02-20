@@ -3632,6 +3632,17 @@
 			}, this), false, true);
 		},
 		/**
+		 * refreshes an array of nodes in the tree all opened nodes inside the array of nodes are reloaded with calls to `load_node`.
+		 * @name refresh_node(obj)
+		 * @param  {array} obj the array of nodes
+		 * @trigger refresh_node.jstree
+		 */
+		refresh_nodes : function(obj) {
+			for(var i = 0; i < obj.length; i++) {
+				p.refresh_node(obj[i]);
+			}
+		},
+		/**
 		 * set (change) the ID of a node
 		 * @name set_id(obj, id)
 		 * @param  {mixed} obj the node
